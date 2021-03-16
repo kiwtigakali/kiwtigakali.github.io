@@ -224,9 +224,9 @@
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then((response) => {
       //tampilkan tombol kirim, hilangkan tombol loading
-        const btnKirim = document.querySelector('.btn-kirim');
-        const btnLoading = document.querySelector('.btn-loading');
-        console.log('Success!', response)
+    btnLoading.classList.toggle('d-none');
+    btnKirim.classList.toggle('d-none');
+        console.log('Success!', response);
     
     })
       .catch((error) => console.error('Error!', error.message))
